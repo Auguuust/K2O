@@ -1,0 +1,20 @@
+# Facebook Dataset - Write-Heavy Workload
+# 10% read, 90% insert operations
+# 10 million operations
+
+recordcount=64000000
+operationcount=10000000
+workload=com.yahoo.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+# Write-Heavy: 10% read, 90% insert
+readproportion=0.1
+updateproportion=0
+scanproportion=0
+insertproportion=0.9
+
+# Use file-based distribution to load real Facebook trace
+requestdistribution=file
+inputfile=/home/sdu/LSM/data/fb_write_64000000.dat
+

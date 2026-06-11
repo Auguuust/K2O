@@ -1,5 +1,5 @@
 # Build outputs
-build/*
+*/build/*
 !build/test.py
 !build/test.sh
 !build/test_books_debug.sh
@@ -7,40 +7,37 @@ build/*
 !build/test_books_transformed.sh
 
 # CMake/generated artifacts
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-compile_commands.json
-Testing/
+*/CMakeCache.txt
+*/CMakeFiles/
+*/cmake_install.cmake
+*/compile_commands.json
+*/Testing/
 
 # Object and static libs
-*.o
-*.obj
-*.a
+*/*.o
+*/*.obj
+*/*.a
 
 # Binaries and shared libraries
-*.so
-*.so.*
-db_bench
-sst_dump
+*/*.so
+*/*.so.*
+*/db_bench
+*/sst_dump
 
 # Python cache
-__pycache__/
-*.pyc
+*/__pycache__/
+*/*.pyc
 
 # Experiment and log artifacts
-exp/
-new_exp/
-logs/
-coverage/
-mylog.txt
-
-# Local backup snapshot
-rocksdb-9.0.0-NEWPIR_bkp20260122/
+*/exp/
+*/new_exp/
+*/logs/
+*/coverage/
+*/mylog.txt
 
 # YCSB-cpp generated files
-YCSB-cpp/CMakeCache.txt
-YCSB-cpp/CMakeFiles/
-YCSB-cpp/Makefile
-YCSB-cpp/cmake_install.cmake
-YCSB-cpp/ycsb
+*/YCSB-cpp/CMakeCache.txt
+*/YCSB-cpp/CMakeFiles/
+*/YCSB-cpp/Makefile
+*/YCSB-cpp/cmake_install.cmake
+*/YCSB-cpp/ycsb

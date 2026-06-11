@@ -1,0 +1,179 @@
+{
+  "GetTime": {
+    "count": 10000000,
+    "Prepare": 0.046,
+    "Read Memtable": 0.152,
+    "Read LSMTree": 4.366,
+    "After Read": 0.038,
+    "total": 4.602
+  },
+  "TableGetFound": {
+    "count": 9965435,
+    "Table Get": 4.130,
+    "total": 4.130
+  },
+  "IndexBlockTime": {
+    "count": 9965435,
+    "IndexIter Create": 0.109,
+    "IndexIter Seek": 0.837,
+    "Before DataBlock": 0.010,
+    "total": 0.956
+  },
+  "DataBlockTime": {
+    "count": 9965435,
+    "DataBlockIter Create": 2.652,
+    "DataBlockIter Seek": 0.219,
+    "After Seek": 0.035,
+    "total": 2.906
+  },
+  "ReadBlockCacheHit": {
+    "count": 31675,
+    "cache read prepare": 0.023,
+    "get from cache": 0.304,
+    "cache hit handle": 0.000,
+    "block read prepare": 0.000,
+    "block read": 0.000,
+    "stats & compression": 0.000,
+    "put block in cache": 0.000,
+    "finish trace": 0.009,
+    "total": 0.337
+  },
+  "ReadBlockCacheMiss": {
+    "count": 9933760,
+    "cache read prepare": 0.024,
+    "get from cache": 0.148,
+    "cache hit handle": 0.000,
+    "block read prepare": 0.000,
+    "block read": 2.041,
+    "stats & compression": 0.000,
+    "put block in cache": 0.298,
+    "finish trace": 0.012,
+    "total": 2.523
+  },
+  "ReadBlock": {
+    "count": 9934276,
+    "prepare io options": 1.905,
+    "read block from file": 0.013,
+    "after read": 0.009,
+    "total": 1.927
+  },
+  "ReadDataBlock": {
+    "count": 9933760,
+    "prepare io options": 1.904,
+    "read block from file": 0.013,
+    "after read": 0.009,
+    "total": 1.926
+  },
+  "ReadFile": {
+    "count": 9934448,
+    "read prepare": 1.631,
+    "file read": 0.009,
+    "after read": 0.009,
+    "total": 1.649
+  },
+  "ReadFileLoop": {
+    "count": 9934448,
+    "avg_loop": 1.000,
+    "per read loop": 1.573,
+    "total": 1.573
+  },
+  "ReadRandomAccessFile": {
+    "count": 9934448,
+    "Pread Time": 1.518,
+    "total": 1.518
+  },
+  "AddToBlockBuilder": {
+    "count": 68886459,
+    "PIR Time": 0.011,
+    "Origin Add Time": 0.036,
+    "total": 0.047
+  },
+  "BlockBuilderFinish": {
+    "count": 2551711,
+    "Finish Block": 0.768,
+    "Training PIR": 0.014,
+    "total": 0.781
+  },
+  "FlushTotalTime": {
+    "count": 172,
+    "Flush Total Time": 370711.841,
+    "total": 370711.841
+  },
+  "FlushTime": {
+    "count": 172,
+    "Build Table": 370339.843,
+    "Log Flush": 14.392,
+    "Write File": 97.314,
+    "total": 370451.550
+  },
+  "FlushBuildTableTime": {
+    "count": 172,
+    "Prepare": 177520.136,
+    "New Table": 121393.987,
+    "Setup Compaction Iterator": 68817.602,
+    "total": 367731.724
+  },
+  "SSTBuildTime": {
+    "count": 172,
+    "Prepare": 159.727,
+    "Add Keys": 177520.074,
+    "Finish Table": 121945.715,
+    "Sync Close": 68265.697,
+    "total": 367891.213
+  },
+  "LearnedIndexBuildTime": {
+    "count": 172,
+    "Learned Index Build Time": 266669.954,
+    "total": 266669.954
+  },
+  "LearnedIndexTrainTime": {
+    "count": 172,
+    "Learned Index Train Time": 14091.652,
+    "total": 14091.652
+  },
+  "LearnedIndexPersistTime": {
+    "count": 172,
+    "Learned Index Persist Time": 4891.414,
+    "total": 4891.414
+  },
+  "FlushAddKey": {
+    "count": 63777877,
+    "Add Key Time": 0.366,
+    "total": 0.366
+  },
+  "TableBuilderFlush": {
+    "count": 2551023,
+    "Flush Time": 2.339,
+    "After Flush": 0.322,
+    "total": 2.661
+  },
+  "TableBuilderWriteBlock": {
+    "count": 2551195,
+    "Block Finish": 0.077,
+    "Swap & Reset": 0.109,
+    "Write Block": 2.057,
+    "total": 2.244
+  },
+  "TableBuilderWriteBlock2": {
+    "count": 2551367,
+    "Compress Block": 0.052,
+    "Write Maybe Compressed Block": 1.930,
+    "After Write Block": 0.016,
+    "total": 1.998
+  },
+  "TableBuilderWriteBlock3": {
+    "count": 2551711,
+    "Prepare IO Options": 0.011,
+    "Set Block Handle": 0.012,
+    "File Append": 1.666,
+    "Write & Append Trailer": 0.138,
+    "After Write Block": 0.015,
+    "total": 1.843
+  },
+  "TableBuilderAdd": {
+    "count": 63777877,
+    "Before Add": 0.010,
+    "Add Time": 0.191,
+    "total": 0.201
+  }
+}

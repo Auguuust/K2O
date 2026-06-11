@@ -1,0 +1,12 @@
+# Balanced workload (50% read, 50% insert)
+workload=com.yahoo.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+readproportion=0.5
+insertproportion=0.5
+updateproportion=0.0
+scanproportion=0.0
+readmodifywriteproportion=0.0
+
+requestdistribution=zipfian

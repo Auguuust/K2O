@@ -1,0 +1,12 @@
+# Write-heavy workload (10% read, 90% insert)
+workload=com.yahoo.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+readproportion=0.1
+insertproportion=0.9
+updateproportion=0.0
+scanproportion=0.0
+readmodifywriteproportion=0.0
+
+requestdistribution=zipfian

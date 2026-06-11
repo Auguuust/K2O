@@ -1,0 +1,21 @@
+# Yahoo! Cloud System Benchmark
+# Workload using Facebook dataset from file
+#   Data source: data/fb_write_64000000.dat
+#                        
+#   Read/update ratio: 95/5
+#   Request distribution: file-based (using keys from dataset)
+
+recordcount=64000000
+operationcount=10000000
+workload=com.yahoo.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+readproportion=0.95
+updateproportion=0.05
+scanproportion=0
+insertproportion=0
+
+# Key configuration: load keys from file
+requestdistribution=file
+datafile=../data/fb_write_64000000.dat

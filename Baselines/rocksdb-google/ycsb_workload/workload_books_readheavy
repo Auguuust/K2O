@@ -1,0 +1,21 @@
+# Books Dataset (Transformed) - Readheavy Workload
+# Keys transformed: first 4 chars moved to end
+# 90% read, 10% insert operations
+# 10 million operations
+
+recordcount=64000000
+operationcount=10000000
+workload=com.yahoo.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+# Readheavy: 90% read, 10% insert
+readproportion=0.9
+updateproportion=0
+scanproportion=0
+insertproportion=0.1
+
+# Use file-based distribution to load transformed Books trace
+requestdistribution=file
+inputfile=/home/sdu/LSM/data/books_write_64000000_transformed.dat
+

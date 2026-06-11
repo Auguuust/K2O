@@ -1,0 +1,20 @@
+# Facebook Dataset - Balanced Workload
+# 50% read, 50% insert operations
+# 10 million operations
+
+recordcount=64000000
+operationcount=10000000
+workload=com.yahoo.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+# Balanced: 50% read, 50% insert
+readproportion=0.5
+updateproportion=0
+scanproportion=0
+insertproportion=0.5
+
+# Use file-based distribution to load real Facebook trace
+requestdistribution=file
+inputfile=/home/sdu/LSM/data/fb_write_64000000.dat
+

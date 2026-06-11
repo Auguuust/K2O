@@ -1,0 +1,1 @@
+ycsb         :       5.106 micros/op 195831 ops/sec 51.064 seconds 10000000 operations; 1958736609.6 MB/s
