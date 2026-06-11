@@ -4,6 +4,19 @@
 
 This repository is a prototype implementation of the paper **K2O: Precise Key-to-Offset Learned Indexing for Read-Efficient LSM-Tree KV Stores**.
 
+The repository contains the following methods:
+
+| Method in Paper | Directory |
+|-----------------|-----------|
+| K2O | `K2O/` |
+| GoogleLI | `Baselines/rocksdb-google/` |
+| LeaderKV | `Baselines/rocksdb-leader/` |
+
+All methods use the same directory structure and share the same build and
+benchmark workflow. In the instructions below, `/path/to/<method>` refers to
+the directory of the method you want to evaluate. To switch methods, only
+replace `<method>` with the corresponding directory path shown above.
+
 ## System Requirements
 
 ### Swap Memory
@@ -34,7 +47,7 @@ This repository is a prototype implementation of the paper **K2O: Precise Key-to
 
 ### 1. Navigate to build directory
 ```bash
-cd /path/to/K2O/build
+cd /path/to/<method>/build
 ```
 
 ### 2. Clean old build files (if needed)
@@ -48,20 +61,22 @@ cmake ..
 make db_bench -j$(nproc)
 ```
 
-After compilation, the executable `db_bench` will be generated in the `build/` directory.
+After compilation, the executable `db_bench` will be generated in the
+`/path/to/<method>/build/` directory.
 
 ## Running Guide
 
 ### Basic Usage
 
-Run tests from the repository root or any parent directory via `build/test.py`:
+Run tests from the selected method directory via `build/test.py`:
 
 ```bash
+cd /path/to/<method>
 python ./build/test.py
 ```
 
 `test.py` automatically:
-1. Compiles `db_bench` in the `build/` directory (if needed)
+1. Compiles `db_bench` in the selected method's `build/` directory (if needed)
 2. Cleans up old database
 3. Runs specified benchmark tests
 4. Collects and saves results to the log directory
@@ -184,4 +199,3 @@ If you encounter a "permission denied" error (when clearing page cache), ensure 
 ## License
 
 Follows RocksDB original license (dual licensed under GPLv2 and Apache 2.0).
-
