@@ -1,0 +1,59 @@
+# Artifact Status
+
+## Purpose
+
+This repository is the research prototype for **K2O: Precise Key-to-Offset
+Learned Indexing for Read-Efficient LSM-Tree KV Stores**. It is intended for
+artifact inspection, compilation, and experimental evaluation.
+
+## Included Implementations
+
+| Method | Location | Status |
+|---|---|---|
+| K2O | `K2O/` | Prototype implementation included |
+| GoogleLI | `Baselines/rocksdb-google/` | Baseline implementation included |
+| LeaderKV | `Baselines/rocksdb-leader/` | Baseline implementation included |
+
+Each implementation is based on RocksDB and can be compiled independently.
+The repository also includes YCSB workload configurations and benchmark code
+for random-read and mixed-workload evaluation.
+
+## Implemented Scope
+
+The artifact includes:
+
+- the K2O learned-index implementation integrated with RocksDB;
+- the GoogleLI and LeaderKV comparison implementations;
+- `db_bench`-based random fill/read evaluation;
+- YCSB workload configurations;
+- configuration paths for Wikipedia and Facebook key workloads;
+- logging and performance-statistics collection code.
+
+## Current Limitations
+
+- This is a research prototype and has not been validated for production use.
+- The artifact is intended for Linux environments.
+- No prebuilt binaries are provided; each method must be compiled locally.
+- Database and output paths are machine-specific and must be configured before
+  execution.
+- Full-scale defaults use 64 million load operations and 10 million run
+  operations, so execution time and storage consumption can be substantial.
+- The helper scripts may clear the Linux page cache and therefore require
+  appropriate `sudo` permission.
+- Dataset-specific Wikipedia and Facebook experiments require the corresponding
+  input data to be placed at the configured workload path.
+- Performance values depend on CPU, memory, storage device, compiler, operating
+  system, and cache state; exact numerical results are not expected to be
+  hardware-independent.
+
+## Expected Outputs
+
+A completed benchmark run may produce:
+
+- `log.txt` containing the complete `db_bench` output;
+- files named `{benchmark}_{iops}.txt` containing extracted throughput;
+- `{benchmark}_{li_tag}_stats_{suffix}.json` containing trace statistics;
+- `{benchmark}_{li_tag}_io_counts_{suffix}.json` containing I/O counts.
+
+See `INSTALL` for build and smoke-test instructions and `README.md` for the
+full experimental configuration.
