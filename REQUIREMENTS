@@ -1,0 +1,67 @@
+# System Requirements
+
+## Operating System
+
+- Linux
+- Ubuntu 20.04 or later, or CentOS 7 or later
+
+The artifact has not been validated on macOS or Windows.
+
+## Build Tools
+
+- CMake 3.10 or later
+- GCC or Clang with C++17 support
+- GNU Make 4.0 or later
+- Python 3 for the benchmark helper scripts
+
+## Required Libraries
+
+Install the development packages for:
+
+- zlib
+- Snappy
+- LZ4
+- Zstandard
+- gflags
+- bzip2
+- POSIX threads (normally provided by the system toolchain)
+
+On Ubuntu, the corresponding packages are typically:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential cmake python3 \
+  zlib1g-dev libsnappy-dev liblz4-dev libzstd-dev \
+  libgflags-dev libbz2-dev
+```
+
+On CentOS, install the equivalent `-devel` packages.
+
+## Runtime Resources
+
+- At least 8 GB of swap space is recommended.
+- Sufficient free storage is required for the database, generated SST files,
+  and experiment logs. The default full-scale configuration loads 64 million
+  records and runs 10 million operations.
+- Benchmark paths such as `DB_PATH`, `WORKLOAD_PATH`, and `EXP_ROOT` must
+  be changed to valid local paths before running the experiments.
+
+## Privileges
+
+The benchmark helper scripts clear the Linux page cache between runs and
+therefore invoke:
+
+```bash
+sync
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+```
+
+Use an account with the required `sudo` permission, or remove this step when
+cache clearing is not part of the intended experiment.
+
+## Workload Inputs
+
+Standard YCSB workload configuration files are included in the implementation
+directories. Experiments using the Wikipedia or Facebook key datasets require
+the corresponding dataset-specific workload inputs to be available at the
+path selected by `WORKLOAD_PATH`.
