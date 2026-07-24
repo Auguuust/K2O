@@ -1,4 +1,4 @@
-# K2O: Precise Key-to-Offset Learned Indexing for Read-Efficient LSM-Tree KV Stores
+# K20: Precise Key-to-Offset Learned Index for Read-Efficient LSM-based KV Stores
 
 ## Project Overview
 
