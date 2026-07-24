@@ -12,6 +12,19 @@ The repository contains the following methods:
 | GoogleLI | `Baselines/rocksdb-google/` |
 | LeaderKV | `Baselines/rocksdb-leader/` |
 
+## Artifact Documentation
+
+The artifact documentation is provided as separate root-level files:
+
+- [REQUIREMENTS](./REQUIREMENTS): operating system, dependencies, resources,
+  privileges, and workload inputs;
+- [INSTALL](./INSTALL): dependency installation, compilation, smoke testing,
+  and full-experiment setup;
+- [STATUS](./STATUS): implemented scope, current limitations, and expected
+  outputs;
+- [LICENSE](./LICENSE): repository-level license notice and links to the
+  complete license texts.
+
 All methods use the same directory structure and share the same build and
 benchmark workflow. In the instructions below, `/path/to/<method>` refers to
 the directory of the method you want to evaluate. To switch methods, only
@@ -198,4 +211,4 @@ If you encounter a "permission denied" error (when clearing page cache), ensure 
 
 ## License
 
-Follows RocksDB original license (dual licensed under GPLv2 and Apache 2.0).
+This artifact follows the RocksDB dual-license structure. See the root-level [LICENSE](./LICENSE) file for the repository-level notice and the locations of the complete license texts.
