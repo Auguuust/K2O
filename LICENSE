@@ -1,0 +1,31 @@
+K2O ARTIFACT LICENSE NOTICE
+
+This repository contains the K2O research prototype, modified RocksDB code,
+baseline implementations, and code derived from third-party projects.
+
+Unless an individual file or directory states otherwise, the RocksDB-derived
+code and the K2O modifications in this artifact are made available under the
+same dual-license terms used by RocksDB. You may use that code under either:
+
+  1. the Apache License, Version 2.0; or
+  2. the GNU General Public License, Version 2.
+
+The complete license texts distributed with the K2O implementation are:
+
+  - Apache License 2.0: K2O/LICENSE.Apache
+  - GNU General Public License v2: K2O/COPYING
+
+Code originating from LevelDB is subject to the license in:
+
+  - K2O/LICENSE.leveldb
+
+The baseline directories preserve their corresponding license files and
+notices:
+
+  - Baselines/rocksdb-google/
+  - Baselines/rocksdb-leader/
+
+All third-party copyright, attribution, and license notices remain applicable
+to the files they cover. This root-level file summarizes the licensing
+structure of the artifact and does not replace the complete license texts or
+file-specific notices included in the repository.
